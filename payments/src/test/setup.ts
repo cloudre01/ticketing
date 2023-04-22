@@ -9,6 +9,8 @@ declare global {
 
 jest.mock('../nats-wrapper')
 
+process.env.STRIPE_KEY = 'sk_test_sPRTwbFWSrZFVYDdFtZissls'
+
 beforeAll(async () => {
   // put your client connection code here, example with mongoose:
   await mongoose.connect(process.env['MONGO_URI']!)
